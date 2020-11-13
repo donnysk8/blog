@@ -1,6 +1,6 @@
 {
-  "title": "title",
-  "author": "",
+  "title": "donny",
+  "author": "donny",
   "plugins": [
     "-lunr",
     "-search",
@@ -34,8 +34,8 @@
     },
     "github-buttons": {
       "buttons": [{
-        "user": "riskers",
-        "repo": "gitbook-template",
+        "user": "donnysk8",
+        "repo": "blog",
         "type": "star",
         "size": "small",
         "count": true
