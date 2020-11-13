@@ -17,14 +17,23 @@ install:
 script:
   - gitbook build
 
-after_script:
-  - cd _book
-  - ls -l
-  - git init
-  - git remote add origin https://${REF}
-  - git add .
-  - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
-  - git push --force --quiet "https://${TOKEN}@${REF}" main:gh-pages
+#after_script:
+#  - cd _book
+#  - git init
+#  - git remote add origin https://${REF}
+#  - git add .
+#  - git commit -m "Updated By Travis-CI With Build $TRAVIS_BUILD_NUMBER For Github Pages"
+#  - git push --force --quiet "https://${TOKEN}@${REF}" main:gh-pages
+  
+deploy:  
+  provider: pages
+  skip-cleanup: true  
+  github-token: $TOKEN # github 上的token环境变量  
+  local-dir: ./_book/ ## 根据情况自定义到静态文件输出目录  
+  target-branch: gh-pages  
+  verbose: true  
+  on:    
+    branch: master
 
 branches:
   only:
