@@ -19,6 +19,7 @@ script:
 
 after_script:
   - cd _book
+  - ls -l
   - git init
   - git remote add origin https://${REF}
   - git add .
