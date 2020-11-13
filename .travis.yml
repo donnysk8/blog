@@ -9,6 +9,8 @@ cache: npm
 #      - donny3@163.com # 设置通知邮件
 #    on_success: change
 #    on_failure: always
+before_install:
+  - export TZ='Asia/Shanghai'  # 设置时区
 
 install:
   - npm install -g gitbook-cli
