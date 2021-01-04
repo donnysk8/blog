@@ -4,5 +4,5 @@
 - [ ] JDK 8的集合操作
 - [ ] 基于Spring Cloud的微服务
 - [ ] DevOps
-- [ ] SpringBoot 定时任务动态配置
+- [ ] SpringBoot 定时任务动态配置 
 
